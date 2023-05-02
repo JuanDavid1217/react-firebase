@@ -65,15 +65,18 @@ export default class FisicoculturismoList extends Component {
         //currentIndex: index,
     //   miVariable: fisicoculturismo
     //});
-
-    this.state.currentFisicoculturismo = fisicoculturismo;
-    this.state.currentIndex = index;
-    this.setState(this.state);
+    this.setState({
+      currentFisicoculturismo : fisicoculturismo,
+      currentIndex : index,
+    })
+    //this.state.currentFisicoculturismo = fisicoculturismo;
+    //this.state.currentIndex = index;
+    //this.setState(this.state);
     console.log(this.state);
   }
 
   render() {
-    const { fisicoculturismo, currentFisicoculturismo, currentIndex } = this.state;
+    const { fisicoculturismo, currentFisicoculturismo} = this.state;
 
     return (
       <div className="row">

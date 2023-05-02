@@ -20,4 +20,5 @@ class FisicoculturismoDataService{
     }
 }
 
-export default new FisicoculturismoDataService();
+const FDS=new FisicoculturismoDataService();
+export default FDS;
