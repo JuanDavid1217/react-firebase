@@ -45,8 +45,11 @@ export default class AddFisicoculturismo extends Component {
                 .ref("images")
                 .child(file.name)
                 .getDownloadURL()
-                .then((myurl) =>  { 
-                        this.state.url=myurl;
+                .then((myurl) =>  {
+                    this.setState({
+                        url : myurl
+                    }) 
+                        //this.state.url=myurl;
                  });
     
         });
@@ -97,6 +100,7 @@ export default class AddFisicoculturismo extends Component {
             published: false,
             url:"",
             submitted: false,
+            file:"",
         });
     }
 
