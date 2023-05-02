@@ -58,7 +58,7 @@ jobs:
         run: docker push ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME_RELEASE}}:${{github.sha}}
       
       - name: update replicas in k8
-        run: sed -i 's/{replicas_okteto}/${{secrets.REPLICAS_OKTETO}}/g' manifests/k8s.yaml
+        run: sed -i 's/{replicas_okteto}/${{secrets.NODOS_RELEASE}}/g' manifests/k8s.yaml
         
       - name: update docker user in k8 
         run: sed -i 's/{docker_user}/${{secrets.DOCKER_USER}}/g' manifests/k8s.yaml
