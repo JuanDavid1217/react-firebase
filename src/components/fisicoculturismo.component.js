@@ -22,7 +22,7 @@ export default class Fisicoculturismo extends Component {
 
     static getDerivedStateFromProps(nextProps, prevState){
         const { fisico } = nextProps;
-        if (prevState.currentFisicoculturismo.id != fisico.id){
+        if (prevState.currentFisicoculturismo.id !== fisico.id){
             return{
                 currentFisicoculturismo: fisico,
                 message:""
